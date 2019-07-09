@@ -16,6 +16,7 @@ func main() {
 	router.Use(gin.Logger())
 	router.LoadHTMLGlob("templates/*.tmpl")
 	router.Static("/static", "static")
+	router.Static("/gojs", "gojs")
 
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "home.tmpl", nil)

@@ -43,8 +43,10 @@ go mod vendor
 
 #### Heroku
 
+App published at: https://web-app-gin-gopherjs-postgres.herokuapp.com/
+
 ```
 heroku login
 heroku create web-app-gin-gopherjs-postgres
-
+git push heroku master
 ```
