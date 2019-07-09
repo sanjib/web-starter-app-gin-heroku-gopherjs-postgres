@@ -2391,7 +2391,7 @@ $packages["."] = (function() {
 	main = function() {
 		var doc;
 		doc = $global.document;
-		console.log("Hello, browser console!", doc);
+		console.log("Hello, browser console from GopherJS!", doc);
 	};
 	$init = function() {
 		$pkg.$init = function() {};
