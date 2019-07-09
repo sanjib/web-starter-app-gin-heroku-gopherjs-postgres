@@ -40,3 +40,11 @@ go mod init
 go build
 go mod vendor
 ```
+
+#### Heroku
+
+```
+heroku login
+heroku create web-app-gin-gopherjs-postgres
+
+```
