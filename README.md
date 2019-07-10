@@ -8,6 +8,7 @@
     - GopherJS 
     https://github.com/gopherjs/gopherjs
 2. Postgres Database
+    - https://github.com/lib/pq
 3. Heroku
 
 ## Running
@@ -16,6 +17,7 @@
 
 - For development in cmd prompt, ```set PORT=5000```
 - Check if PORT has been set ```echo %PORT%```
+- ```set DATABASE_URL=postgresql-concentric-60467```
 
 ### Any Platoform
 - Build ```go build```
@@ -33,6 +35,7 @@
 4. Create Heroku Account
 5. Install Heroku CLI 
 https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+6. Install PosgreSQL driver ```go get github.com/lib/pq```
 
 #### Go Module Setup
 ```
@@ -43,10 +46,12 @@ go mod vendor
 
 #### Heroku
 
-App published at: https://web-app-gin-gopherjs-postgres.herokuapp.com/
+App: https://web-app-gin-gopherjs-postgres.herokuapp.com/
+Database: postgresql-concentric-60467
 
 ```
 heroku login
 heroku create web-app-gin-gopherjs-postgres
 git push heroku master
+heroku addons:create heroku-postgresql:hobby-dev
 ```
