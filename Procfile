@@ -1,1 +1,1 @@
-web: bin/web-app-gin-gopherjs-postgres
+web: bin/web-starter-app-gin-heroku-gopherjs-postgres
