@@ -31,10 +31,6 @@ func main() {
 		c.HTML(http.StatusOK, "home.tmpl", nil)
 	})
 
-	if err := router.Run(":" + port); err != nil {
-		log.Fatal(err.Error())
-	}
-
 	router.GET("/tick", func(c *gin.Context) {
 		if _, err := db.Exec("CREATE TABLE IF NOT EXISTS ticks (tick timestamp)"); err != nil {
 			c.String(http.StatusInternalServerError, fmt.Sprintf("Error creating database table: %q", err))
@@ -59,4 +55,8 @@ func main() {
 			c.String(http.StatusOK, fmt.Sprintf("Read from DB: %s\n", tick.String()))
 		}
 	})
+
+	if err := router.Run(":" + port); err != nil {
+		log.Fatal(err.Error())
+	}
 }

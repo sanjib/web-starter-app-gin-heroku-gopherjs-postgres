@@ -17,7 +17,7 @@
 
 - For development in cmd prompt, ```set PORT=5000```
 - Check if PORT has been set ```echo %PORT%```
-- ```set DATABASE_URL=postgresql-concentric-60467```
+- ```set DATABASE_URL=postgres://skezehaabtkfki:655df4f74465080a6f8ad57e4d688e43cd950999797f86239026dd19dbade6fc@ec2-54-83-1-101.compute-1.amazonaws.com:5432/dc61vlcgktmmji```
 
 ### Any Platoform
 - Build ```go build```
@@ -48,10 +48,12 @@ go mod vendor
 
 App: https://web-app-gin-gopherjs-postgres.herokuapp.com/
 Database: postgresql-concentric-60467
+DATABASE_URL: postgres://skezehaabtkfki:655df4f74465080a6f8ad57e4d688e43cd950999797f86239026dd19dbade6fc@ec2-54-83-1-101.compute-1.amazonaws.com:5432/dc61vlcgktmmji
 
 ```
 heroku login
 heroku create web-app-gin-gopherjs-postgres
 git push heroku master
 heroku addons:create heroku-postgresql:hobby-dev
+heroku config:get DATABASE_URL -a web-app-gin-gopherjs-postgres
 ```
