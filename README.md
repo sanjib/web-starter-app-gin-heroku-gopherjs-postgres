@@ -1,5 +1,21 @@
 # web-starter-app-gin-heroku-gopherjs-postgres
 
+Based on the tutorial "Go web app starter guide - Gin, Heroku, GopherJS, Postgres" by Brian Will: https://www.youtube.com/watch?v=uey7jIEmR3A
+
+## App Published at Heroku
+
+Home Page: https://web-app-gin-gopherjs-postgres.herokuapp.com
+
+![hello world home page](./screenshots/hello-world.png)
+
+![javascript console output from gopherjs](./screenshots/console.png)
+
+![go code in browser console](./screenshots/go-code-in-browser-sources.png)
+
+Database Test page: https://web-app-gin-gopherjs-postgres.herokuapp.com/tick
+
+![database test page](./screenshots/tick.png)
+
 ## Tech Stack
 
 1. Go
@@ -47,7 +63,9 @@ go mod vendor
 #### Heroku
 
 App: https://web-app-gin-gopherjs-postgres.herokuapp.com/
+
 Database: postgresql-concentric-60467
+
 DATABASE_URL: postgres://skezehaabtkfki:655df4f74465080a6f8ad57e4d688e43cd950999797f86239026dd19dbade6fc@ec2-54-83-1-101.compute-1.amazonaws.com:5432/dc61vlcgktmmji
 
 ```
